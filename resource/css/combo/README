@@ -1,0 +1,13 @@
+release.py 放到需要发布模块的根目录下。
+比如：
+css/
+css/release.py
+css/yuicompressor.jar
+操作命令：
+action cmd:
+
+cd snda-php/videosearch/resource/css/
+cp combo/release.py combo/yuicompressor.jar ./
+python ./release.py 
+mv css/ cssbak/
+mv _css/ css

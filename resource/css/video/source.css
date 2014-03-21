@@ -1,0 +1,54 @@
+@charset utf-8;
+/*
+Copyright (c) 2011, snda Inc. All rights reserved.
+version: 1.0.0
+*/
+/**布局信息**/
+.lyt-bar{}
+.lyt-bd{margin-top:22px;}
+.lyt-bd-l{width:660px;}
+.lyt-bd-l-1{}
+.lyt-bd-l-2{ margin-top:24px;}
+
+.lyt-bd-r{width:270px;}
+.lyt-bd-r-1{}
+
+/*全局标题*/
+h2{background-image:url(images/sp-repeat-x.png);background-repeat:repeat-x;background-position:left bottom; height:35px; line-height:35px;}
+h2 .tit{font-size:16px; font-family:微软雅黑,黑体; font-weight:bold; }
+
+/*模块共用属性*/
+#hot-bf li,#all-bf li{float:left; margin-left:15px;}
+#hot-bf .foot,#all-bf .foot{text-align:right; height:21px;font-family:"宋体"; font-weight:bold;}
+#hot-bf .m-pic .tit,#all-bf .m-pic .tit{background:url(images/sp-repeat-x.png) repeat-x left bottom;word-wrap: break-word;word-break:break-all; white-space:normal;height:34px;overflow:hidden; padding-bottom:6px;}
+#hot-bf .count,#all-bf .count{ padding-top:3px;}
+
+/*热门缤纷*/
+#hot-bf ul {/*display:none;*/}
+#hot-bf .m-pic li{margin-left:60px;}
+#hot-bf h2 ul{display:block;padding:7px 0 0 125px;}
+#hot-bf h2 li, #hot-bf h2 li em{font-weight:normal;height:21px;line-height:21px;cursor:pointer;color:#018BD3;}
+#hot-bf h2 li.selected, #hot-bf h2 li.selected em {background:url(images/spr_vs.png) 0 -44px no-repeat;color:#222;}
+#hot-bf h2 li.selected {padding-left:3px;}
+#hot-bf h2 li.selected em {display:inline-block;background-position:right -66px;padding:0 8px 0 5px;color:#000;_display:inline;_zoom:1;}
+#hot-bf .b-follow{margin-top: 7px;}
+#hot-bf .m-pic{margin-top:24px;margin-left:-60px;_margin-left:-120px;}
+#hot-bf ul.selected {display:block;}
+
+/*全部缤纷*/
+#all-bf ul {/*display:none;*/}
+#all-bf .m-pic li{margin-left:60px;}
+#all-bf h2 ul{display:block;padding:7px 0 0 125px;}
+#all-bf h2 li, #all-bf h2 li em{font-weight:normal;height:21px;line-height:21px;cursor:pointer;color:#018BD3;}
+#all-bf h2 li.selected, #all-bf h2 li.selected em {background:url(images/spr_vs.png) 0 -44px no-repeat;color:#222;}
+#all-bf h2 li.selected {padding-left:3px;}
+#all-bf h2 li.selected em {display:inline-block;background-position:right -66px;padding:0 8px 0 5px;color:#000;_display:inline;_zoom:1;}
+#all-bf .b-follow{margin-top: 7px;}
+#all-bf .m-pic{margin-top:24px;margin-left:-60px;_margin-left:-120px;}
+#all-bf ul.selected {display:block;}
+
+/*一小时缤纷榜*/
+#oneHourBf h2{background-image:none;border-bottom:1px #ECECEC solid;}
+#oneHourBf .m-pic li{ padding:16px 0 16px 0;}
+
+

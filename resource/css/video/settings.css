@@ -1,0 +1,165 @@
+#register_form {
+    padding-left:150px;
+    padding-top:25px;
+}
+#settings_title{
+    font-size:16px;
+    border-bottom:1px solid #f3f3f3;
+}
+#submit_btn{
+    width:75px;
+    height:30px;
+    background:url(images/baocun01.png) 0 0 no-repeat ;
+}
+#submit_btn:hover{
+    background:url(images/baocun02.png) 0 0 no-repeat ;
+}
+/**************修改密码*****************/
+#old_password, #new_password, #comfirm_password,#safe_wrapper{
+    width:150px;
+}
+#safe_wrapper{
+    position:relative;
+}
+#safe_bar_container {
+    position:absolute;
+    top:8px;
+    right:0px;
+    height:6px;
+    width:96px;
+    background:#ccc;
+}
+#safe_bar{
+    background:red;
+    height:6px;
+    width:0px;
+}
+.weak_safe{
+    width:33px!important;
+}
+.common_safe{
+    width:66px!important;
+}
+.very_safe{
+    width:96px!important;
+}
+/*************上传头像*****************/
+#submit_img{
+    width:60px;
+    height:30px;
+    border:0 none;
+    background:url(images/shangchuan01.png) 0 0 no-repeat ;
+}
+#submit_img:hover{
+    background:url(images/shangchuan02.png) 0 0 no-repeat ;
+}
+
+#file_wrapper {
+    position: relative;
+    width:200px;
+    height:20px;
+    display:inline-block;
+}
+
+#file_faker {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+/* 这是用户看到的按钮*/
+#file_faker input{
+    width:200px;
+    height:18px;
+}
+/* 这里是按钮*/
+#file_btn {
+    position:absolute;
+    top:0;
+    right:0;
+    width:60px;
+    height:22px;
+    line-height:22px;
+    text-align :center;
+    background:#878787;
+    color:#fff;
+}
+#file_uploader {
+    position: relative;
+    text-align: right;
+    -moz-opacity:0 ;
+    filter:alpha(opacity: 0);
+    opacity: 0;
+    z-index: 2;
+}
+
+.ctr,.cbr{
+    z-index:40;
+}
+#submit_img {
+    position:absolute;
+    top:-1px;
+    right:-70px;
+}
+
+.ative_edit {
+    padding:20px;
+    padding-top:5px;
+    background:#f5f5f5;
+}
+.center_tip{
+    width:400px;
+    height:24px;
+    line-height:24px;
+    font-size:14px;
+    color:#d0d0d0
+}
+
+/* 图片切割器*/
+#rRightDown,#rLeftDown,#rLeftUp,#rRightUp,#rRight,#rLeft,#rUp,#rDown{
+    position:absolute;
+    background:#fff;
+    border:1px solid #ccc;
+    width:5px;
+    height:5px;
+    z-index:5;
+    font-size:0;
+}
+
+#rLeftDown,#rRightUp{cursor:ne-resize;}
+#rRightDown,#rLeftUp{cursor:nw-resize;}
+#rRight,#rLeft{cursor:e-resize;}
+#rUp,#rDown{cursor:n-resize;}
+
+#rLeftDown{left:-4px;bottom:-4px;}
+#rRightUp{right:-4px;top:-4px;}
+#rRightDown{right:-4px;bottom:-4px;}
+#rLeftUp{left:-4px;top:-4px;}
+#rRight{right:-4px;top:50%;margin-top:-4px;}
+#rLeft{left:-4px;top:50%;margin-top:-4px;}
+#rUp{top:-4px;left:50%;margin-left:-4px;}
+#rDown{bottom:-4px;left:50%;margin-left:-4px;}
+
+#cutter_wrapper{
+    display:inline-block;
+    position:relative;
+}
+#cutter{
+    border:1px solid #ccc;
+    width:180px;
+    height:180px;
+    top:20px;
+    left:20px;
+}
+
+#img_mask{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#000;
+    -moz-opacity:0.5 ;
+    filter:alpha(opacity: 50);
+    opacity: 0.5;
+}

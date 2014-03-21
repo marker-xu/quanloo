@@ -1,0 +1,26 @@
+@charset utf-8;
+/*
+Copyright (c) 2011, snda Inc. All rights reserved.
+version: 1.0.0
+*/
+/**布局信息**/
+.bd-a{}
+.bd-a-a{margin-top:15px;}
+.bd-b{ margin-top:15px;}
+.bd-b-a{ margin-top:15px;}
+
+/*可能喜欢的视频*/
+.logintips {padding:5px 0;margin-bottom:8px;font-size:14px;}
+h2{ font-size:14px; font-weight:normal;}
+h2 .wrap{border:1px #D9D4D4 solid; height:32px; line-height:32px; padding:0 14px;background-position:0 -50px;}
+h2 a{ margin-left:12px; font-size:12px; }
+h2 p{ padding-left:32px; position:relative;}
+
+.circlelist .list li {
+    float: left;
+    margin: 0 17px 16px 0;
+}
+/*hui*/
+.circlelist{ height:267px;}
+#next_group{background:url(images/sp-icon.png) -730px -196px no-repeat; padding:7px 0 7px 23px; color:#666;}
+#next_group:hover{ background-position:-730px -228px; text-decoration:none; color:#4083A9;}

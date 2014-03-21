@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>shawl.qiu template</title>
+</head>
+<body>
+
+<a href="#reset">reset</a>
+<a href="javascript:addContent()">addContent</a>
+<a class="go-top" href="#" id="gotop"></a>
+<a class="go-top" href="#" id="feed_back"></a>
+
+<script>
+/**
+ * 取屏幕的可用大小相关值
+ * @author      suches@btbtd.org
+ * @date        2008-9-19
+ */         
+function viewport_f() 
+{
+    var myWidth = 0, myHeight = 0;
+    if(typeof(window.innerWidth ) == 'number' ) 
+    {/* Non-IE */
+        width_i = window.innerWidth; height_i = window.innerHeight;
+    } 
+    else if 
+    (
+        document.documentElement &&( document.documentElement.clientWidth || document.documentElement.clientHeight ) 
+    ) 
+    {/* IE 6 */
+        width_i = document.documentElement.clientWidth; height_i = document.documentElement.clientHeight;
+    } 
+    else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) 
+    {/* IE 4 */
+        width_i = document.body.clientWidth; height_i = document.body.clientHeight;
+    }
+    
+    var sLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
+    var sTop = document.documentElement.scrollTop || document.body.scrollTop;
+    var oWidth = document.documentElement.offsetWidth || document.body.offsetWidth;
+    var oHeight = document.documentElement.offsetHeight || document.body.offsetHeight
+    
+    return {
+                width:width_i
+                , height:height_i
+                , max_width: width_i + sLeft
+                , max_height: height_i + sTop
+                , scrollLeft: sLeft
+                , scrollTop: sTop
+                
+                , body_width: oWidth
+                , body_height: oHeight
+          };
+}
+
+/**
+ *  @description    兼容各浏览器的附加事件函数
+ *  @author         suches
+ *  @date           2008-9-22
+ */ 
+function attach_event_f(e_, event_name_s, func_f, capture_b)
+{
+    if(document.addEventListener){e_.addEventListener(event_name_s, func_f, capture_b);}
+    else if(document.attachEvent)
+    {
+        event_name_s = 'on'+event_name_s;
+        if(e_[event_name_s]==null){e_[event_name_s] = func_f;} else{e_.attachEvent(event_name_s, func_f);}
+    }
+}
+</script>
+
+<script src="../GoTop.js"></script>
+
+<style>
+.go-top
+{
+    background: url(images/go-top.png) no-repeat left top;
+    width: 43px;
+    height:44px;
+    position:absolute;
+    cursor:pointer;
+}
+</style>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+<script>
+
+window.count = 1;
+
+function addContent()
+{
+    var r = Math.ceil( Math.random() * 20 ) + 5;
+    
+    var content = new Array( r ).join( window.count + '<br />'  );
+    
+    var d = document.createElement('div');
+    d.innerHTML = content;
+    
+    document.body.appendChild( d );
+    
+    window.count++;
+}
+
+GoTop.exec( {"id": "gotop", "right": 60, "bottom": 40 } );
+GoTop.exec( {"id": "feed_back", "top": 360, "left": 1, "autoHide": false } );
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>URL路由</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<link href="../../../apps/assets/base.css" rel="stylesheet" type="text/css" media="screen"/>
+	<style type="text/css">
+
+	</style>
+	<script type="text/javascript" src="../../../apps/qwrap.src.js"></script>
+	<script type="text/javascript" src="../url.js"></script>
+</head>
+<body>
+<div id="doc3">
+	<a href="#!/foo">foo</a> <a href="#!/bar/1/?name=yy&no=3">bar</a> <a href="#!/default/?name=yy&no=3">default</a> 
+</div>
+<script type="text/javascript">
+var url = Url(window,{});
+
+url.route('default',function(){
+	console.log(arguments);
+}).route('/foo',function(param){
+	console.log(param);
+	alert('this is foo')
+}).route('/bar/1/',function(param){
+	console.log(param['name']);
+	console.log(param['no']);
+}).listen();
+</script>
+</body>
+</html>

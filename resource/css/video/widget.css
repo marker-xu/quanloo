@@ -1,0 +1,76 @@
+body {
+    background:#fff; /*url(widget/bg.gif) repeat scroll 0 0 transparent;*/
+}
+
+#widget_table{
+    margin-top:20px;
+    width:750px;
+    border:1px solid #373737;
+    border-collapse:collapse;
+}
+#widget_table th{
+    padding:5px;
+    background:#ededed;
+    text-align:center;
+    border:1px solid #373737;
+}
+#widget_table tr:hover td{
+    background:#d7e7f1;
+}
+#widget_table td{
+    padding:5px;
+    border:1px solid #373737;
+}
+
+
+.tips{
+    color:red;
+}
+
+.widget_btn{
+    background:#1283BA;
+    border:0 none;
+    margin:1px;
+}
+.widget_btn span{
+    display:block;
+    font-size:12px;
+    height:24px;
+    line-height:24px;
+    margin:0px 15px;
+    color:#fff;
+    white-space:nowrap; 
+    letter-spacing:2px;
+}
+/*=============completecompanyinfo 页面==============*/
+#complete_info{
+    display: none;
+    margin-top:2px;
+    text-align:center;
+    line-height:3;
+    width:956px;
+    font-size:16px;
+    letter-spacing:2px;
+    color:#077db4;
+    background:#f9f2bb;
+    border:2px solid #f4ea8b;
+}
+
+/*=============addwidget modifywidget 页面==============*/
+.skin1{
+    width:200px;
+    height:200px;
+    background:url(widget/skin1.jpg) center center no-repeat;
+}
+.skin2{
+    width:200px;
+    height:200px;
+    background:url(widget/skin2.jpg) center center no-repeat;
+}
+#add_widget_table{
+    width:100%;
+}
+#add_widget_table td {
+    padding:5px;
+}
+

@@ -1,0 +1,187 @@
+/*
+Copyright (c) 2011, snda Inc. All rights reserved.
+version: 1.0.0
+*/
+/* player v3 style*/
+#player-page {position: relative;margin-top:15px;}
+#main {float: right;width:725px;background:#fff;border: 1px #D9D4D4 solid;}
+#player {padding:10px 25px 20px;}
+#player .hd {padding:10px 0;}
+#player .hd h1 {font-size:22px;line-height:1.2;font-weight:normal;font-family: "Microsoft YaHei";color:#000;}
+#player .hd .label {margin:10px 0 0 0; color:#888; font-size:14px; }
+#player .hd .label .from {float: right;}
+#player .hd .label .circle {float:left;}
+#player .hd .label .circle .info {float:left;margin:0 18px 0 0;}
+#player .hd .label .circle .b-follow {float:left; width:52px; height:23px; background:url(images/play/bt_follow.png) no-repeat 0 0;text-indent:-999em;overflow: hidden;}
+#player .hd .label .circle .b-follow:hover { background:url(images/play/bt_follow.png) no-repeat 0 -33px;text-indent:-999em;overflow: hidden;}
+#player .hd .label .circle .followed {float:left; width:52px; height:23px; background:url(images/play/bt_follow.png) no-repeat 0 -66px; text-indent:-999em;overflow: hidden; cursor:pointer;}
+#player .hd .label .circle .followed:hover {width:66px; background:url(images/play/bt_follow.png) no-repeat 0 -99px; }
+#player .hd .label .circle-name {padding-left:21px; background:url(images/play/ico_circle.png) no-repeat 0 0;}
+#player .hd .label .lnk-open-url {padding:0 15px 0 0; background:url(images/play/bg_open_url.png) no-repeat 100% 2px;}
+#player .bd {clear:both;}
+#player .bd .video {width:100%;height:500px;background:#000; }
+
+#player .bd .video-recomm {position:relative; width:675px; height:575px; color:#fff; zoom:1; background:url(images/play/bg_v_recomm.png) repeat 0;}
+#player .bd .video-recomm a,
+#player .bd .video-recomm a:hover {color:#fff; text-decoration: none; cursor: pointer;}
+#player .bd .video-recomm .recomm-vodeo {width:380px; float: left; padding:30px 57px 0 27px;}
+#player .bd .video-recomm .recomm-vodeo h3 {margin:0 0 6px 5px; font-family: "Microsoft YaHei";font-size:18px; font-weight:normal;}
+#player .bd .video-recomm .recomm-vodeo .v-list {height:440px; overflow: hidden;}
+#player .bd .video-recomm .recomm-vodeo .v-list a,
+#player .bd .video-recomm .recomm-vodeo .v-list a:hover { display:block; height:90px; margin:0 0 10px 0; padding:4px; overflow: hidden; zoom:1;border:1px #1d1d1d solid; }
+#player .bd .video-recomm .recomm-vodeo .v-list a:hover {border:1px #2e2e2e solid;}
+#player .bd .video-recomm .recomm-vodeo .v-item .v-pic {float:left; width:109px; height:80px; margin-right:10px; overflow: hidden; padding:5px; background:#323232
+}
+#player .bd .video-recomm .recomm-vodeo .v-item .v-pic img {width:109px; height:80px;}
+#player .bd .video-recomm .recomm-vodeo .v-item .v-info {overflow: hidden; zoom:1;}
+#player .bd .video-recomm .recomm-vodeo .v-item .v-info .title {height:44px; line-height:1.2; font-family: "Microsoft YaHei";font-size:18px;}
+#player .bd .video-recomm .recomm-vodeo .v-item .v-info .circle {color:#2896d2; margin:0 0 8px 0; padding:0 0 0 21px; background:url(images/play/spr_v_recomm.png) no-repeat 0 0;}
+#player .bd .video-recomm .recomm-vodeo .v-item .v-info .num .played {padding:0 0 0 21px; background:url(images/play/spr_v_recomm.png) no-repeat 0 -24px; margin-right:15px;}
+#player .bd .video-recomm .recomm-vodeo .v-item .v-info .num .mood {padding:0 0 0 21px; background:url(images/play/spr_v_recomm.png) no-repeat 0 -48px;}
+#player .bd .video-recomm .recomm-vodeo .ft-btn {padding:0 0 0 105px;}
+#player .bd .video-recomm .recomm-vodeo .ft-btn a {float: left; width:48px; height:48px; background:url(images/play/spr_v_rec_bt.png) no-repeat 0 0; margin:0 44px 0 0; }
+#player .bd .video-recomm .recomm-vodeo .ft-btn a.bt-pre {background-position:0 -148px;}
+#player .bd .video-recomm .recomm-vodeo .ft-btn a.bt-pre-dis {background-position:0 0;}
+#player .bd .video-recomm .recomm-vodeo .ft-btn a.bt-next {background-position:0 -98px;}
+#player .bd .video-recomm .recomm-vodeo .ft-btn a.bt-next-dis {background-position:0 -49px;}
+#player .bd .video-recomm .curr-video {width:165px; float: left; padding:66px 0 0 0;}
+#player .bd .video-recomm .curr-video .v-pic {width:109px; height:80px; margin:0 18px 10px 18px; overflow: hidden; padding:5px; background:#323232
+}
+#player .bd .video-recomm .curr-video .v-pic img {width:109px; height:80px;}
+#player .bd .video-recomm .curr-video .v-info .title {line-height:1.2; margin:0 18px 10px 18px; }
+#player .bd .video-recomm .curr-video .v-info .circle {color:#2896d2; margin:0 18px 8px 18px; padding:0 0 0 21px; background:url(images/play/spr_v_recomm.png) no-repeat 0 0;}
+#player .bd .video-recomm .curr-video .v-info .num {margin:0 18px 10px 18px;}
+#player .bd .video-recomm .curr-video .v-info .num .played {padding:0 0 0 21px; background:url(images/play/spr_v_recomm.png) no-repeat 0 -24px; margin-right:5px;}
+#player .bd .video-recomm .curr-video .v-info .num .mood {padding:0 0 0 21px; background:url(images/play/spr_v_recomm.png) no-repeat 0 -48px;}
+#player .bd .video-recomm .curr-video .v-btn a {display:block; width:162px; height:50px; background:url(images/play/bt_replay.png) no-repeat 0 0;}
+#player .bd .video-recomm .logo {position: absolute; top:530px; right:10px; width:121px; height:34px;}
+#player .bd .video-recomm .logo_tudou {background:url(images/play/ico_tudou.jpg) no-repeat 0 0;}
+#player .bd .video-recomm .logo_56 {background:url(images/play/ico_56.jpg) no-repeat 0 0;}
+#player .bd .video-recomm .logo_joy {background:url(images/play/ico_joy.jpg) no-repeat 0 0;}
+#player .bd .video-recomm .logo_sina {background:url(images/play/ico_sina.jpg) no-repeat 0 0;}
+#player .bd .video-recomm .logo_ku6 {background:url(images/play/ico_ku6.jpg) no-repeat 0 0;}
+#player .bd .video-recomm .logo_youku {background:url(images/play/ico_youku.jpg) no-repeat 0 0;}
+
+#useraction {margin:0 25px 10px;}
+#comments {float:left;width:455px;}
+#otherbox {float: right;width:200px;}
+#comments .hd,
+#otherbox .hd {height:26px;line-height:26px;font-size:14px;padding:0 6px;background:#e3e3e3;border-bottom:1px #d3d3d3 solid;}
+
+#comments .bd,
+#otherbox .bd {margin:10px 0;}
+#comments .hd {margin-top:1px;border-top:1px #d3d3d3 solid;}
+#comments .comment-form {padding:9px;background-color: #ededed;zoom:1;}
+#comments .comment-form .pic {float:left;margin:0 6px 0 0;}
+#comments .comment-form .pic img {width:30px;}
+#comments .comment-form .form {overflow: hidden;zoom:1;}
+#comments .comment-form .form .textarea {display: block;width:390px;_width:388px;height:60px;max-width:390px;max-height:60px;padding:4px;outline:none;border:1px #cccccc solid;resize: none;zoom:1;}
+#comments .comment-form .form .btn {text-align:right;margin:6px 0 0 0;}
+#comments .comment-form .form .btn .bt-submit {width:79px;height:29px;padding:0;margin:0;border:0;text-indent:-999em;overflow:hidden;background:url(images/play/bt_comment.png) no-repeat 0 0;}
+#comments .guest-tips p {padding:10px;text-align:center;background-color: #ededed;}
+
+#comments .list {margin:10px 0 0 0;}
+#comments .list .nodata {text-align:center;padding:15px 0;}
+#comments .list .msg-item {padding:7px 0;border-bottom:1px #e5e5e5 solid;line-height:1.3;zoom:1;}
+#comments .list .msg-item .pic {float:left;margin:0 7px 0 0;}
+#comments .list .msg-item .pic img {width:30px;}
+#comments .list .msg-item .msg {overflow: hidden;zoom:1;}
+#comments .list .msg-item .msg .uname {color: #999;}
+#comments .list .msg-item .msg .con {word-wrap:break-word;word-break:break-all;max-width:443px;overflow: hidden;}
+
+#otherbox .bd {width:100%;overflow: hidden;}
+#otherbox .bd ul {width:105%;}
+
+.xinqing {margin:0 0 15px 0;}
+.xinqing li {float: left;;margin:0 11px 10px 0;}
+.xinqing li .item {display:block; width:30px; position:relative;}
+.xinqing li .item img {width:30px;display:block;}
+.xinqing li .item span {position:absolute;bottom:-5px;right:-5px;}
+
+.xinqing .ico-xq-wg-m,
+.xinqing .ico-xq-dx-m,
+.xinqing .ico-xq-fn-m,
+.xinqing .ico-xq-xh-m,
+.xinqing .ico-xq-jn-m {
+    display:block;
+    width:12px;
+    height:13px;
+    background:url(images/user/spr_ico_xq_m.png) no-repeat;
+}
+.xinqing .ico-xq-wg-m {background-position:0 -51px;}
+.xinqing .ico-xq-dx-m {background-position:0 -24px;}
+.xinqing .ico-xq-fn-m {background-position:0 -76px;}
+.xinqing .ico-xq-xh-m {background-position:0 0;}
+.xinqing .ico-xq-jn-m {background-position:0 -103px;}
+
+.sharelog li {float: left;;margin:0 12px 10px 0;}
+.sharelog li .item {display:block; width:30px; position:relative;}
+.sharelog li .item img {width:30px;display:block;}
+
+#aside {float: left;width:214px;background:#fff;border: 1px #D9D4D4 solid;}
+#aside .hd {}
+#aside .hd ul {padding:3px 0 0 15px;background:#e3e3e3 url(images/play/bg_aside_hd.png) repeat-x 0 0;border-bottom:1px #d3d3d3 solid;}
+#aside .hd li {float:left;font-size:14px;height:30px;padding:0 17px;line-height:30px;}
+#aside .hd li a,
+#aside .hd li a:hover {color:#000;text-decoration:none;}
+
+#aside .hd li.on {border:1px #d3d3d3 solid; border-bottom:0; background:#fff;position:relative;height:30px;margin-bottom:-1px;}
+#aside .bd {padding:10px 0 10px;}
+#aside .bd .videolist ul {overflow: hidden;zoom:1;}
+#aside .bd .videolist li {border-top:1px #e5e5e5 solid;position:relative;}
+#aside .bd .videolist li.first {border:0;}
+#aside .bd .videolist li a {display:block;overflow: hidden; zoom:1;padding:6px 8px;color:#333333;}
+#aside .bd .videolist li a:hover {background-color: #f1f1f1;}
+#aside .bd .videolist li a.on {background-color: #f1f1f1;}
+#aside .bd .videolist li .pic {float:left;margin:0 7px 0 0;width:96px;height:64px;overflow: hidden;}
+#aside .bd .videolist li .pic img {width:96px;}
+#aside .bd .videolist li .title {overflow: hidden;zoom:1;line-height:1.3;}
+#aside .ft {}
+
+#toolbar {width:100px;clear:both;position: absolute;right:-100px;top:50px;}
+#toolbar .i-mood2 {
+    display:block;width: 25px;height: 31px;cursor: pointer;background-image: url(images/board-brick.png?t=20120329);background-repeat: no-repeat;
+}
+#toolbar h3 {font-weight:normal;}
+#toolbar .i-love {background-position: -198px -5px;}
+#toolbar .i-happy {background-position: -198px -37px;}
+#toolbar .i-nobody {background-position: -198px -69px;}
+#toolbar .i-angry {background-position: -198px -101px;}
+#toolbar .i-jiong {background-position: -198px -262px;}
+#toolbar .on_xh_mood .i-love,
+#toolbar .i-love:hover {background-position:-198px -133px;}
+#toolbar .on_dx_mood .i-happy,
+#toolbar .i-happy:hover {background-position:-198px -165px;}
+#toolbar .on_wg_mood .i-nobody,
+#toolbar .i-nobody:hover {background-position:-198px -197px;}
+#toolbar .on_fn_mood .i-angry,
+#toolbar .i-angry:hover {background-position:-198px -229px;}
+#toolbar .on_jn_mood .i-jiong,
+#toolbar .i-jiong:hover {background-position:-198px -294px;}
+
+#toolbar .favorite {height:114px;padding:21px 0 0 10px;background:url(images/play/bg_toolbar.png?t=2012) no-repeat 0 -494px;}
+#toolbar .favorite a {position:relative;display:block;width:40px;height:25px;background:url(images/play/bg_toolbar.png?t=2012) no-repeat 4px -364px;color:#999;}
+#toolbar .favorite a.added,
+#toolbar .favorite a:hover {background-position:4px -398px;text-decoration:none;}
+#toolbar .favorite a span {position:absolute;top:26px;display:none;}
+#toolbar .favorite a.added span {display:inline;}
+#toolbar .favorite .addWatch{margin-top: 13px;}
+#toolbar  .favorite .addCircle{ background-position: 4px -17px;}
+#toolbar  .favorite .addCircle:hover{background-position: 4px -56px;}
+
+
+#toolbar .share {padding:20px 0 0 10px;}
+#toolbar .share h3 {margin-bottom:6px;}
+#toolbar .share li {margin:0 0 10px 0;}
+#toolbar .share li a {display:block;width:60px;height:22px;overflow:hidden;text-indent:-999em;background:url(images/play/bg_toolbar.png?t=2012) no-repeat 0 0;}
+#toolbar .share li.sina a {background-position:0 -433px;}
+#toolbar .share li.renren a {background-position:0 -463px;}
+
+#toolbar .mood {padding:10px 0 0 14px;height:241px;background:url(images/play/bg_toolbar.png?t=2012) no-repeat 0 -104px;}
+#toolbar .mood ul {width:25px;padding:10px 0 0 0;}
+#toolbar .mood ul li {margin:0 0 10px;}
+.black-tips2{
+    position:absolute;padding-left:2px; left:-999em;top:100px;height:20px;line-height:20px;background:url(images/play/bg_tips.png) no-repeat 0 0;
+    z-index:330;_display:inline;_zoom:1;width:35px;text-align:center;
+}
+.black-tips2 span {color:#fff;}

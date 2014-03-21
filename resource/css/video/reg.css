@@ -1,0 +1,147 @@
+@charset utf-8;
+/*
+Copyright (c) 2011, snda Inc. All rights reserved.
+version: 1.0.0
+*/
+/**
+ * style for videosearch group_page
+**/
+body{color:#333;}
+#login3 li,#loginer .okey,
+.s-ic-reg{background-image:url(images/sp-icon-reg.png);background-repeat:no-repeat;}
+#loginer li{background-image:url(images/sp-repeat-x.png);background-repeat:repeat-x;}
+
+input.text{background-color: #FFFFFF;border: 1px solid #999;height: 24px;line-height: 24px;padding: 2px;vertical-align: middle;}
+input.text:focus{border: 1px solid #FF9900;}
+button.btn{border: 0 none;color: #FFFFFF;cursor: pointer;}
+textarea.textara{border:1px #999 solid;}
+
+/**布局信息**/
+#bd{ position:relative;}
+#bd .wrap{ border:1px #D9D4D4 solid; background-color:#FFF; padding:28px 0px; margin-top:15px;}
+
+.regTit{background-position:0 -116px;}
+.forgetTit{background-position:-62px -206px;}
+.overReg{background-position:0px -385px;}
+#loginer h2,#popup_group h2{display:block; height:40px;text-shadow: 1px 1px 0 #FFFFFF;font-family: "微软雅黑";font-size: 18px;margin-top:4px;}
+#loginer .ul,.submiter{ padding-left:0px;overflow:hidden;width:auto;}
+#loginer li{background-position:left bottom; padding-bottom:14px;}
+#loginer .tit{ height:31px; line-height:31px; font-size:14px;}
+#loginer .formPlace{}
+#loginer .tips{margin-left:14px; height:31px; line-height:31px; color:red;}
+#loginer .okey{ background-position:-181px -151px; width:100px;}
+#loginer .tipTxt{ height:17px; color:#999;}
+#loginer .change{ cursor:pointer; margin-left:6px; color:#4083A9;}
+#loginer .code-pic{ position:relative; top:6px; margin-left:4px;}
+#loginer .remeb{ margin-left:6px; font-size:12px;}
+.submiter{ margin-top:32px; padding-bottom:22px;text-align: center;}
+.btn-login{ background-position:0 -40px; width:180px; height:48px;}
+.btn-forget{background-position:0 -89px; width:100px; height:27px;}
+#login3{position: absolute;right: 9px;top: 81px;width: 143px;}
+#login3 .wrap{ padding:20px 26px;border: none;}
+#login3 h3{ font-weight:normal; font-size:14px;}
+#login3 li{ height:21px; line-height:21px;  margin-top: 12px; padding-left:25px;}
+#login3 li a{ color:#4083A9;}
+.logo_snda{ background-position:-181px -37px;}
+.logo_sina{background-position:-181px -64px;}
+.logo_qq{background-position:-181px -90px;}
+.rmblink{ margin-left:12px; vertical-align:bottom; padding-top:20px;}
+#email{ width:270px;}
+#password,#honeyname,#password1,#password2{ width:200px;}
+#checkcode{ width:80px;}
+#signature{ width:416px; padding:4px;}
+#rememberme{ position:relative; top:2px;}
+#loginer .clearBg{ background:none;}
+#loginer li{ list-style:none outside none; margin:0px;}
+#login3 .reg_new{bottom: -41px; position: absolute; line-height:27px;}
+#login3 .reg_new .t{ float:left;}
+#login3 .regid{ margin-left:15px;}
+
+.login_popup_big
+{
+    position: relative;
+    height: 340px;
+    background: url(images/popup_login_bg.png) no-repeat 0 0;
+}
+/*后续更改*/
+#loginer .tipss{color: red;left:210px;position: absolute;top:11px;width:313px;}
+#loginer,#popup_group{padding:28px 0;border: medium none;width:726px; margin:0px auto;}
+.tag_edit .tag_l,.tag_edit .tag_r{position: relative;padding: 14px;width: 320px;border: 1px solid #DBDBDB;min-height: 80px;}
+.tag_r h3,.tag_edit h3{margin-top:0px;font-size:12px; font-weight: normal;}
+.tag_edit h3 span{font-size:12px;font-weight: normal;}
+.reg_tit{border-bottom:1px solid #DBDBDB;height: 72px;padding-left:44px;}
+.reg_tit span,.reg_tit em{background-image:url(images/sp-icon-reg2.png);background-repeat:no-repeat;display: block;width:165px;height:59px;float: left;}
+.reg_tit .step1{background-position: -2px -1px;}
+.reg_tit .step2{background-position: -200px -61px;}
+.reg_tit .over{background-position: -200px -1px;}
+.reg_tit em{width:27px;background-position: -169px -1px;}
+.reg_input_tag{width:200px;height:28px;background:url(images/sp-icon-reg2.png) no-repeat 0 -72px;position: relative;}
+#input_tag{border: medium none;height: 18px;left: 7px;line-height: 18px;position: absolute;top: 3px;width: 141px;}
+#submit_tag{width:37px; height:24px;position: absolute;right: 3px;top:2px;cursor: pointer;display: block;}
+#owned_tag li{width:auto;float: left;height:21px;line-height: 21px;border: 1px solid #8DB6D6;background:none;margin:8px 4px 0 0;white-space:nowrap;padding:0px;}
+#owned_tag li a{display: block;background:url(images/sp-icon-reg2.png?t=20120518) no-repeat right -152px;padding:0 17px 0 11px;_display:inline;zoom:1;}
+#owned_tag li a:hover{background-position:right -130px;text-decoration:none;}
+.tag_edit .tipTxt{margin:4px 0 0 4px}
+.input_tag_wrap{position: relative;}
+
+#guess_tag li{width:auto;float: left;height:21px;line-height: 21px;border: 1px solid #8EB7D5;background-color:#DFF1FF;margin:8px 4px 0 0;white-space:nowrap;padding:0px;background-image:none;}
+#guess_tag li a{padding: 0 6px 0 20px;background:url(images/sp-icon-reg2.png) no-repeat -371px -35px;display: block;color: #649AC0;text-shadow: 1px 1px 0 #FFFFFF;}
+#guess_tag li a:hover{text-decoration: none;}
+#guess_tag li .tag_added{background-position: -371px 5px;}
+.btn-reg{width:128px; height:38px;background:url(images/sp-icon-reg2.png) no-repeat -4px -127px;}
+#popup_group .pg_right{float: right;font-family: "宋体";font-size: 12px;font-weight: normal;}
+#closely_all{margin-left: 8px;position: relative;top: 2px;}
+.popup_group .pg_mid{margin:4px 0 0;padding:0px;}
+.popup_group .pg_footer{padding: 12px 0 0;}
+.popup_group .pg_footer .pg_done{width:128px; height:38px;background:url(images/sp-icon-reg2.png) no-repeat -4px -171px;position: static;}
+.popup_group .pg_footer .pg_subbox{height:auto;}
+.popup_group .pg_later{left: 441px;position: absolute;top: 15px;}
+
+#register .oauth-login {margin:0 20px 20px;border-top:1px #ddd dotted;height:22px;line-height:22px;padding:20px 0 0 20px;}
+#register .oauth-login .text {float:left;}
+#register .oauth-login .bt-gologin {width:100px;height:27px; margin:0 8px;display:inline-block; _display:inline; zoom:1; background:url(images/user/bt_login_reg.png) no-repeat 0 0;overflow: hidden; line-height:1000px;font-size:0; vertical-align: middle;}
+#register .oauth-login .bt-ologins {float:left;}
+#register  .oauth-login .bt-ologin {margin:0 5px 0 0;}
+
+.page-nav {float:right;width:90px;line-height:20px;}
+.page-nav .progress {float:left;}
+.page-nav .btn {float:right;width:42px;height:20px;}
+.page-nav .btn a {zoom:1;display:inline-block;width:20px;height:20px;background:url(images/user/spr_pagenav.png) no-repeat 0 0;}
+.page-nav .btn .bt-pre {background-position:0 0;}
+.page-nav .btn .bt-pre:hover {background-position:0 -30px;}
+.page-nav .btn .bt-pre-dis {background-position:0 -60px;}
+.page-nav .btn .bt-next {width:19px;background-position:-20px 0;}
+.page-nav .btn .bt-next:hover {width:19px;background-position:-20px -30px;}
+.page-nav .btn .bt-next-dis {width:19px;background-position:-20px -60px;}
+.page-nav .btn .bt-next-dis,
+.page-nav .btn .bt-pre-dis {cursor:default;}
+.page-nav {font-size:12px;font-weight:500;}
+
+/*这个没有影响吧*/
+#circle_parent{
+    clear: both;
+    height: 520px;
+    overflow: hidden !important;
+    width: 800px;
+}
+.regTit  {
+    width:800px;
+}
+.circleitem-t1 .user_complete_watch{
+	background: url("images/user/spr_bt_circle1.png") no-repeat scroll 0 0 transparent;
+}
+.circleitem-t1 .user_complete_watch:hover{
+	background: url("images/user/spr_bt_circle1.png") no-repeat scroll 0 -27px transparent;
+}
+.watchall{background: url("images/user/spr_bt_circle1.png") no-repeat scroll 0 -54px transparent;
+    height: 38px;
+    width: 128px;cursor: pointer;
+}
+.pg_subbox .pg_done{background: url("images/user/spr_bt_circle1.png") no-repeat scroll 0 -92px transparent;}
+/*那个页面只能关注24个圈子,没有就出现这个图片*/
+.watchmore {
+    background: url("images/watchmore.jpg")  no-repeat scroll transparent;
+    width:708px;
+    height:351px;
+    display:block;
+}

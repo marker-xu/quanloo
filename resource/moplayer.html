@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"  allowfullscreen="true"/>
+        <meta name=”viewport” content=”height=device-height, initial-scale=1.0, user-scalable=no”/>
+        <title>播放器</title> 
+        <script language="javascript" type="text/javascript"> </script>
+        <style type="text/css">
+            html, body{
+                width:102%;
+                height:100%;
+            }
+            #mask{
+                width:90%;
+                height:90%;
+            }
+            #mask{
+                background:url(img/loading.gif) center center no-repeat;
+            }
+        </style>
+
+    </head>
+
+	<body style="padding:0;margin:0;">
+        <div id="mask">
+            <!--这里是蒙板-->
+        </div>
+        
+        <div id="player">
+            <!--这里是播放器-->
+        </div>
+
+        <script type="text/javascript">
+           window.onload = function(){
+            //通过ID取得页面元素
+            function $(id){
+                return document.getElementById(id)
+            }
+            //判定是否加载成功
+            function checkLoaded(flash){
+                try{
+                	window.pGetPlayUrl.log(",PERCENT= " + flash.PercentLoaded());
+                    return Math.floor(flash.PercentLoaded()) == 100
+                }catch(e){
+                	window.pGetPlayUrl.log("error");
+                    return false;
+                }
+            }
+            
+             function playEnd(){
+				    		//alert("playEnd");//youku
+				    		window.pGetPlayUrl.playFinish();
+						}
+						function onPlayerComplete(){
+						    //alert(1);	//tudou
+						    window.pGetPlayUrl.playFinish();
+						}
+						function playFinish(){
+						    //alert("playFinish"); //ku6
+						    window.pGetPlayUrl.playFinish();
+						}
+						
+						function send2Android(){
+						 	var strHtml = window.pGetPlayUrl.GetUrl();
+						  document.getElementById("show").innerHTML="This is a message from android:" + strHtml;
+						 }
+						 
+						function get4Android(str){
+						 	document.getElementById("show").innerHTML="This is a message from android:"+str;
+						}
+				
+
+            //取得flash的播放地址
+            function getFlashURL(){
+            		var strHtml = window.pGetPlayUrl.GetUrl();
+								return strHtml;
+                //return 'http://player.youku.com/player.php/sid/XMzkwNTgzMTIw/v.swf';
+            }
+            function createFlashHTML(u,w,h,i,wm,v){
+                var g= "";
+                if(window.ActiveXObject){
+                    g='<OBJECT classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase=" http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" id="'+i+'" name="'+i+'" border="0" width="'+w+'" height="'+h+'"><param name="movie" value="'+u+'" /><param name="quality" value="high" /><param name="allowScriptAccess" value="always" /><param name="menu" value="false" /><param name="allowFullScreen" value="true" /><param name="wmode" value="'+wm+'" /><param name="flashvars" value="'+v+'" /></OBJECT>'
+                }else{
+                    g='<embed name="'+i+'" width="'+w+'" height="'+h+'" type="application/x-shockwave-flash" pluginspage=" http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" allowScriptAccess="always" allowFullScreen="true" quality="high" menu="false" wmode="'+wm+'" flashvars="'+v+'" src="'+u+'"></embed>'
+                }
+                return g;
+            }
+            var flashHTML = createFlashHTML(getFlashURL(),'100%','100%',"videoPlayer","Opaque","autoPlay=true&isAutoPlay=true&auto=1&playMovie=true&adss=0&api=1");
+            $("player").innerHTML = flashHTML
+            var flash = $("player").children[0];
+   			var err_num = 0;
+            var intervalID =  setInterval(function(){
+                if(checkLoaded(flash)){
+               	   window.pGetPlayUrl.loadfinish("bz");
+                    clearInterval(intervalID);
+                    $("mask").style.display = "none";
+                    intervalID = null;
+                }else 
+                {
+                	if(err_num >= 20)	//最长20秒
+                	{
+                		window.pGetPlayUrl.loadfinish("bz");
+                		window.pGetPlayUrl.playError("timeout");
+                		clearInterval(intervalID);
+                		$("mask").style.display = "none";
+                    	intervalID = null;
+                	}else{
+                	}
+                	err_num++;
+                }
+            },1000)
+               
+          }
+               
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+@charset utf-8;
+/*
+Copyright (c) 2011, snda Inc. All rights reserved.
+version: 1.0.0
+*/
+/**
+ * style for videosearch group_page
+**/
+body{color:#333;}
+input.text{background-color: #FFFFFF;border: 1px solid #999;height: 24px;line-height: 24px;padding: 2px;vertical-align: middle;}
+input.text:focus{border: 1px solid #FF9900;}
+button.btn{border: 0 none;color: #FFFFFF;cursor: pointer;}
+textarea.textara{border:1px #999 solid;}
+.clearfix {overflow: hidden;zoom:1;}
+/**布局信息**/
+#bd{ position:relative;}
+#bd .wrap{ border:1px #D9D4D4 solid; background-color:#FFF; padding:28px 40px; margin-top:15px;}
+#bd .login_popup_big {width:848px; padding:0; margin:15px auto; width:848px; text-align:left;}
+#register h3 {font-size:14px; margin:0 0 16px;}
+#register .oauth-login {border-bottom:1px #ddd dotted;padding:0 0 20px; margin:0 0 12px 0;}
+#register .oauth-login .text {float:left;}
+#register .oauth-login .bt-gologin {width:183px;height:35px; margin:0 8px;display:inline-block; _display:inline; zoom:1; background:url(images/user/bt_login_reg.png) no-repeat 0 0;overflow: hidden; line-height:1000px;font-size:0; vertical-align: middle;}
+#register .oauth-login .bt-ologins {float:left;}
+#register  .oauth-login .bt-ologin {margin:0 19px 0 0;}
