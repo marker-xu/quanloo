@@ -1,0 +1,1 @@
+<%Util::concatJs(['common.js', 'video_action.js', 'video_util.js', 'feedback.js'], $smarty.config.v, 'video/')%>

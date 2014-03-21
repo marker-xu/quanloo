@@ -1,0 +1,1 @@
+<%Util::concatCss(['bc.css', 'popup_group.css'], $smarty.config.v, 'video/')%>
